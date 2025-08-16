@@ -129,5 +129,5 @@ def delete_note(note_id):
     return jsonify({"message": "deleted", "id": note_id})
 
 if __name__ == "__main__":
-    # Dev server
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Render provides PORT
+    app.run(host="0.0.0.0", port=port, debug=False)
