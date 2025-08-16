@@ -24,7 +24,7 @@ This project ensures robust **authentication & authorization** while following i
 ## 🛠️ Tech Stack  
 - **Frontend:** React + Chakra UI  
 - **Backend:** Node.js + Express.js  
-- **Database:** MongoDB  
+- **Database:** SQLAlchemy  
 - **Authentication:** JWT (JSON Web Tokens)  
 
 ---
@@ -78,11 +78,6 @@ npm start
 
 ---
 
-## 📸 Preview  
-
-![App Screenshot](./preview.png)
-
----
 
 ## 🤝 Contributing  
 Pull requests are welcome! If you’d like to contribute, please fork the repo and submit a PR.  
