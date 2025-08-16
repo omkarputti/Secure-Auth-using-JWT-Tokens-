@@ -23,7 +23,7 @@ import {
 } from "@chakra-ui/react"
 import { DeleteIcon, AddIcon } from "@chakra-ui/icons"
 
-const API_BASE = "https://secure-auth-using-jwt-tokens-1.onrender.com" // change if your backend host differs
+const API_BASE = "https://secure-auth-using-jwt-tokens-1.onrender.com/api" // change if your backend host differs
 
 export default function App() {
   const toast = useToast()
