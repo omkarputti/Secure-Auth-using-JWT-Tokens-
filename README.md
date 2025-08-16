@@ -1,106 +1,97 @@
-Secure Notes App — JWT Authentication
+# Secure Auth using JWT Tokens 🔐
 
-Live Demo: https://secure-auth-using-jwt-tokens.vercel.app/
+A secure authentication system built with **JWT (JSON Web Tokens)** for user login, signup, and session management.  
+This project ensures robust **authentication & authorization** while following industry security practices.
 
-A simple yet secure notes application featuring:
+---
 
-User Authentication: Register and login with JWT (JSON Web Tokens) for stateless sessions
+## 🚀 Live Demo  
+👉 [Secure Auth App](https://secure-auth-using-jwt-tokens.vercel.app/)
 
-CRUD Notes API: Create, view, and delete notes—private to each authenticated user
+---
 
-Easy Deployment: Frontend hosted on Vercel and backend on Render
+## 📌 Features  
+✅ User Signup & Login  
+✅ JWT-based Authentication  
+✅ Secure Password Hashing  
+✅ Persistent Sessions  
+✅ Logout Functionality  
+✅ Protected Routes  
+✅ Deployed Frontend on **Vercel** & Backend on **Render**  
 
-Features
-Capability	Stack / Tool	Description
-Authentication	Flask-JWT-Extended	Stateles auth using access_token
-API Security	Protected API routes	All /api/notes routes are JWT-secured
-Notes CRUD	Flask + SQLAlchemy	Users can manage personal notes stored in SQLite
-Database	SQLite (default)	Lightweight and easy—no extra setup needed
-CORS	Flask-CORS	Safely allows frontend hosted on Vercel to access backend
-Hosting	Vercel + Render	Frontend auto-deploys from GitHub, backend uses gunicorn via Render
-Quick Start Guide
-1. Clone and Setup
+---
+
+## 🛠️ Tech Stack  
+- **Frontend:** React + Chakra UI  
+- **Backend:** Node.js + Express.js  
+- **Database:** MongoDB  
+- **Authentication:** JWT (JSON Web Tokens)  
+
+---
+
+## ⚙️ Setup Instructions  
+
+### 1️⃣ Clone the Repository  
+```bash
 git clone https://github.com/omkarputti/Secure-Auth-using-JWT-Tokens-.git
 cd Secure-Auth-using-JWT-Tokens-
+```
 
+### 2️⃣ Install Dependencies  
+Frontend:  
+```bash
+cd client
+npm install
+```  
+Backend:  
+```bash
+cd server
+npm install
+```
 
-Create a .env file (optional for development) in the root:
+### 3️⃣ Environment Variables  
+Create a `.env` file inside the **server** folder:  
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
 
-SECRET_KEY=your-secret-key
-JWT_SECRET_KEY=your-jwt-secret
-DATABASE_URL=sqlite:///notes.db
+### 4️⃣ Run Locally  
+Frontend:  
+```bash
+cd client
+npm start
+```  
+Backend:  
+```bash
+cd server
+npm start
+```  
 
+---
 
-Install dependencies:
+## 🌍 Deployment  
 
-pip install -r requirements.txt
+- **Frontend:** Deployed on [Vercel](https://vercel.com/)  
+- **Backend:** Deployed on [Render](https://render.com/)  
 
+---
 
-Run locally (development mode):
+## 📸 Preview  
 
-python app.py
+![App Screenshot](./preview.png)
 
+---
 
-Navigate to http://localhost:5000/api/health—you should see:
+## 🤝 Contributing  
+Pull requests are welcome! If you’d like to contribute, please fork the repo and submit a PR.  
 
-{ "status": "ok" }
+---
 
-2. Deploy Backend on Render
+## 📜 License  
+This project is licensed under the **MIT License**.  
 
-Go to Render and create a Web Service using your GitHub repo
+---
 
-Configure:
-
-Build Command: pip install -r requirements.txt
-
-Start Command: gunicorn app:app
-
-Leave Root Directory blank (app.py is at the repo root)
-
-Once spinning up, use ...onrender.com/api/health to verify deployment.
-
-3. Deploy Frontend on Vercel
-
-Push your frontend code to GitHub
-
-In Vercel:
-
-Import the repo
-
-Set notes_frontend (or your frontend folder) as the Root Directory
-
-Build Command: npm run build
-
-Output Directory: dist (for Vite, or build if using CRA)
-
-Set environment variables if needed (e.g., VITE_API_URL)
-
-Deploy!
-
-4. Using the App
-
-Visit the frontend live site.
-
-Register a new account.
-
-Log in to receive your JWT—frontend stores it locally.
-
-Create, view, and delete notes. All actions are authenticated.
-
-Modules Listing (for requirements.txt)
-Flask
-Flask-Cors
-Flask-JWT-Extended
-Flask-SQLAlchemy
-gunicorn
-Werkzeug
-python-dotenv
-
-CORS & Security Notes
-
-Backend uses Flask-CORS to allow cross-origin requests from your React app on Vercel.
-
-Authentication happens on the backend only—never trust the frontend UI, always validate the JWT on the server.
-
-“You can not secure front-end parts, only API in back-end.” — StackOverflow advice 
-Stack Overflow
+### Made with ❤️ by [Omkar Putti](https://github.com/omkarputti)
